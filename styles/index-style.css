@@ -16,6 +16,8 @@ header {
     border-bottom: 1px solid white;
     padding: 24px;
     font-size: x-large;
+    display: flex;
+    align-items: center;
 }
 
 .menu {
@@ -24,6 +26,11 @@ header {
     gap: 12px;
     margin-left: auto;
     margin-right: 46px;
+}
+
+.home{
+    width: 45px;
+    margin-left: 46px;
 }
 
 main {
@@ -39,18 +46,30 @@ main {
 }
 
 .vinyl {
-    font-size: 15vw;
+    font-size: 17vw;
     line-height: 1;
+    letter-spacing: 2.5rem;
+    font-weight: 600;
     color: #ff2626;
 }
 
 .records {
-    font-size: 29rem;
+    font-size: 17vw;
     line-height: 0.7;
+    letter-spacing: 2.5rem;
+    font-weight: 600;
     color: #ff2626;
 }
 
 .vinyldeco{
     position: absolute;
-    width: 50px;
+    width: 15vw;
+    left: 630px;
+    top: 295px;
+    animation: spin 4s linear infinite; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
