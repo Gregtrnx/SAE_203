@@ -1,0 +1,56 @@
+body {
+    background-color: #2f2f2f;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <200>;
+    font-style: normal;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+header {
+    border-bottom: 1px solid white;
+    padding: 24px;
+    font-size: x-large;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 46px;
+}
+
+main {
+    margin: auto;
+    margin-top: 10vh;
+    text-align: center;
+    position: relative;
+}
+
+.lieu {
+    font-size: 6vw;
+    line-height: 0.5;
+}
+
+.vinyl {
+    font-size: 15vw;
+    line-height: 1;
+    color: #ff2626;
+}
+
+.records {
+    font-size: 29rem;
+    line-height: 0.7;
+    color: #ff2626;
+}
+
+.vinyldeco{
+    position: absolute;
+    width: 50px;
+}
