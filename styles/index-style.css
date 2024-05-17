@@ -37,6 +37,23 @@ header {
     margin-left: 46px;
 }
 
+.categorie {
+    background-color: #252525;
+    width: 500px;
+    height: 350px;
+    position: fixed;
+    right: -100%;
+    background-color: #333;
+    color: white;
+    transition: right 0.3s ease-out;
+    border-radius: 14px;
+}
+
+.ouvrir {
+    right: 0;
+}
+
+
 /***Page d'acceuil***/
 
 main {
@@ -82,9 +99,9 @@ main {
 
 .vinyldeco {
     position: absolute;
-    width: 15vw;
-    top: -4%;
-    left: 41%;
+    width: 16.8vw;
+    top: -13%;
+    left: 40.5%;
 
     animation: spin 4s linear infinite;
 }
@@ -125,7 +142,13 @@ h2 {
     display: flex;
     flex-direction: column;
     border-radius: 4px;
+    transition: transform 0.5s ease, background-color 0.5s ease;
 }
+
+.decade:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+  }
 
 .selection .col-sm-2 {
     margin-right: 46px;
