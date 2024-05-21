@@ -38,19 +38,36 @@ header {
 }
 
 .categorie {
-    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 4.5rem;
+    font-weight: 700;
     width: 500px;
     height: 350px;
-    position: fixed;
+    position: absolute;
     right: -100%;
     background-color: #333;
     color: white;
-    transition: right 0.3s ease-out;
+    transition: right 0.5s ease-out;
     border-radius: 14px;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.26);
+    z-index: 1;
+}
+
+.categorie>* {
+    opacity: 50%;
+}
+
+.categorie>*:hover {
+    opacity: 100%;
+    transition: 0.4s ease;
 }
 
 .ouvrir {
-    right: 0;
+    right: 5%;
+    top: 15%;
 }
 
 
@@ -148,7 +165,7 @@ h2 {
 .decade:hover {
     transform: scale(1.2);
     transition: transform 0.5s ease;
-  }
+}
 
 .selection .col-sm-2 {
     margin-right: 46px;
@@ -206,4 +223,17 @@ h3 {
 .acc:hover span:after {
     opacity: 1;
     right: 0;
+}
+
+/***Bas de page***/
+
+footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid white;
+    margin-top: 10%;
+}
+
+.credit {
+    margin-right: auto;
 }
