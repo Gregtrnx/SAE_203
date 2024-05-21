@@ -6,7 +6,6 @@ body {
     font-weight: <200>;
     font-style: normal;
     overflow-x: hidden;
-    height: 3000px;
 }
 
 /***En-tête***/
@@ -232,8 +231,18 @@ footer {
     align-items: center;
     border-top: 1px solid white;
     margin-top: 10%;
+    padding-top: 35px;
+    padding-left: 66px;
+    padding-bottom: 35px;
 }
 
 .credit {
     margin-right: auto;
+}
+
+.reseau{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: 66px;
 }
