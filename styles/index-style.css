@@ -65,8 +65,8 @@ header {
 }
 
 .ouvrir {
-    right: 5%;
-    top: 15%;
+    right: 2%;
+    top: 10%;
 }
 
 
@@ -240,7 +240,7 @@ footer {
     margin-right: auto;
 }
 
-.reseau{
+.reseau {
     display: flex;
     align-items: center;
     gap: 24px;
