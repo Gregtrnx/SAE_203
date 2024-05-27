@@ -1,0 +1,248 @@
+body {
+    background-color: #2f2f2f;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <200>;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+/***En-tête***/
+
+button {
+    border: none;
+    background: none;
+}
+
+header {
+    border-bottom: 1px solid white;
+    padding: 24px;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 46px;
+}
+
+.home {
+    width: 45px;
+    margin-left: 46px;
+}
+
+.categorie {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 4.5rem;
+    font-weight: 700;
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    right: -100%;
+    background-color: #333;
+    color: white;
+    transition: right 0.5s ease-out;
+    border-radius: 14px;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.26);
+    z-index: 1;
+}
+
+.categorie>* {
+    opacity: 50%;
+}
+
+.categorie>*:hover {
+    opacity: 100%;
+    transition: 0.4s ease;
+}
+
+.ouvrir {
+    right: 2%;
+    top: 10%;
+}
+
+
+/***Page d'acceuil***/
+
+main {
+    margin: auto;
+    margin-top: 10vh;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lieu {
+    font-size: 6vw;
+    line-height: 0.5;
+}
+
+.vinyl {
+    font-size: 17vw;
+    line-height: 1;
+    letter-spacing: 2.5rem;
+    font-weight: 600;
+    color: #ff2626;
+}
+
+.records {
+    font-size: 17vw;
+    line-height: 0.7;
+    letter-spacing: 2.5rem;
+    font-weight: 600;
+    color: #ff2626;
+    position: relative;
+}
+
+.vinyldeco {
+    position: absolute;
+    width: 16.8vw;
+    top: -13%;
+    left: 40.5%;
+
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/***Catégorie "Décénie"***/
+
+h2 {
+    font-size: xx-large;
+    padding-bottom: 24px;
+    margin-top: 20%;
+    padding-left: 66px;
+    border-bottom: 1px solid white;
+}
+
+.selection {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.selection .row {
+    display: flex;
+    justify-content: center;
+}
+
+.decade {
+    background-color: #f2f2f2;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.decade:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+
+.selection .col-sm-2 {
+    margin-right: 46px;
+}
+
+.selection .row .col-sm-2:nth-child(5n) {
+    margin-right: 0;
+}
+
+.img_d {
+    width: 250px;
+}
+
+h3 {
+    color: black;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.acc {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: black;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px 5px 14px 23%;
+}
+
+.acc span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.acc span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.acc:hover span {
+    padding-right: 15px;
+}
+
+.acc:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/***Bas de page***/
+
+footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid white;
+    margin-top: 10%;
+    padding-top: 35px;
+    padding-left: 66px;
+    padding-bottom: 35px;
+}
+
+.credit {
+    margin-right: auto;
+}
+
+.reseau {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: 66px;
+}
