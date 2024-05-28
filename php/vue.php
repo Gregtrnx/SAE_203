@@ -1,85 +1,47 @@
-<?php
-  // Initialisation des messages
-  $titre = "";
-  
-  if($liste != "")
-  {
-    // ****** PREPARATION DES DONNEES ******
-    $titre = "<h3>Liste des $liste</h3>";
-
-    // Début du tableau HTML
-    $resultat = "<table>";
-
-    // Ajout de la ligne avec les titres de colonnes
-    $resultat .= "<tr>";
-    foreach($table[0] as $cle => $valeur)
-    {
-      $resultat .= "<th>$cle</th>";
-    }
-    $resultat .= "</tr>";
-
-    // Ajout des lignes avec une boucle foreach()
-    foreach($table as $ligne)
-    {
-      $resultat .= "<tr>";
-      foreach($ligne as $valeur)
-      {
-        $resultat .= "<td>$valeur</td>";
-      }
-      $resultat .= "</tr>";
-    }
-
-    // Fin du tableau HTML
-    $resultat .= "</table>";
-  }
-  else
-    $resultat = "Veuillez choisir une liste";
-?>
-
-<!-- ****** AFFICHAGE DES DONNEES ****** -->
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="utf-8">
-  <link href="/styles/style.css" rel="stylesheet">
-  <title>PHP</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des Vinyles</title>
+  <link rel="stylesheet" href="/styles/vue-style.css">
 </head>
 
 <body>
   <header>
-    <h1>PHP</h1>
+    <h1>Liste des Vinyles</h1>
   </header>
-  
-  <main class="resultat">
-    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-      <label class="form_elt">
-        <span>Liste des clients</span>
-        <input type="radio" name="liste" value="clients"
-          <?php
-            if ($liste == "clients")
-            echo "checked";
-          ?>>
-      </label>
-      <label class="form_elt">
-        <span>Liste des articles</span>
-        <input type="radio" name="liste" value="articles"
-          <?php
-            if ($liste == "articles")
-              echo "checked";
-          ?>>
-      </label>
-      <label class="form_elt">
-        <span>Liste des commandes</span>
-        <input type="radio" name="liste" value="commandes"
-          <?php
-            if ($liste == "commandes")
-              echo "checked";
-          ?>>
-      </label>
-      <button class="valid" name="clic" value="ok">Cliquez ici</button>
-    </form>
-    <?= $titre ?>
-    <?= $resultat ?>
+  <main>
+    <div class="selection">
+      <div class="row">
+        <?php if (!empty($table)): ?>
+          <?php foreach ($table as $vinyle): ?>
+            <div class="col-sm-2">
+              <div class="decade">
+                <img class="img_d" src="/images/VINYLE_CLASSIQUE.jpg" alt="<?= $vinyle['Titre'] ?>">
+                <h3><?= $vinyle['Titre'] ?></h3>
+                <h4><?= $vinyle['Artiste'] ?></h4>
+                <button class="acc">
+                  <span>Accéder</span>
+                </button>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <p>Aucun vinyle trouvé.</p>
+        <?php endif; ?>
+      </div>
+    </div>
   </main>
+  <footer>
+    <div class="credit">© 2024 Vinyl Records, Inc</div>
+    <div class="reseau">
+      <a href="#"><img src="/images/facebook (1).svg" alt="Facebook"></a>
+      <a href="#"><img src="/images/twitter (1).svg" alt="Twitter"></a>
+      <a href="#"><img src="/images/icons8-instagram-24.svg" alt="Instagram"></a>
+    </div>
+  </footer>
 </body>
+
 </html>
