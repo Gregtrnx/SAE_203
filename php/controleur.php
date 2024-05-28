@@ -1,12 +1,18 @@
 <?php
-  // TRAITEMENT DES DONNEES TRANSMISES DANS L'URL
-  // Initialisation des variables
-  if(!empty($_GET["liste"]))
-  {
-    $liste = $_GET["liste"];
+  require "modele.php";
 
-    if ($liste == "vinyle")
-      require "modele_vinyle.php";
+  // TRAITEMENT DU FORMULAIRE
+  // Initialisation des variables
+  if(!empty($_POST["liste"]))
+  {
+    $liste = $_POST["liste"];
+
+    if ($liste == "clients")
+      $table = listeClients();
+    else if ($liste == "articles")
+      $table = listeArticles();
+    else if ($liste == "commandes")
+      $table = listeCommandes();
   }
   else
     $liste = '';
