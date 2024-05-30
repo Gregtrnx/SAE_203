@@ -1,3 +1,5 @@
+/* vue-style.css */
+
 body {
     background-color: #2f2f2f;
     color: white;
@@ -6,13 +8,16 @@ body {
     font-weight: 200;
     font-style: normal;
     overflow-x: hidden;
+    text-align: center;
 }
-
-/**** Main | Selection Vinyle ****/
 
 .selection {
     margin-top: 10%;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .selection .row {
@@ -45,13 +50,6 @@ body {
 h3 {
     color: black;
     font-size: xx-large;
-    text-align: center;
-    margin: 10px 0;
-}
-
-h4 {
-    color: black;
-    font-size: medium;
     text-align: center;
     margin: 10px 0;
 }
@@ -94,4 +92,25 @@ h4 {
 .acc:hover span:after {
     opacity: 1;
     right: 0;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid white;
+    margin-top: 10%;
+    padding-top: 35px;
+    padding-left: 66px;
+    padding-bottom: 35px;
+}
+
+.credit {
+    margin-right: auto;
+}
+
+.reseau {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: 66px;
 }
